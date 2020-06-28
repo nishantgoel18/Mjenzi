@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= favicon_link_tag asset_path('apland/core-img/favicon.ico'), :rel => 'icon', :type =>  'image/png', sizes: "57x57" %>
+
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap' %>
+
+    <%= stylesheet_link_tag 'apland/new_design', media: 'all' %>
+    
+    
+    <title>Mjenzi :: Ruby on Rails | Digital | IoT | Big Data</title>
+  </head>
+  
+  <body>
+
+    <%= render template: 'layouts/new_design_header' %>
+    
+    <%= yield %>
+
+    <%= javascript_include_tag 'apland/new_design' %>
+    
+    <%= render template: 'layouts/new_design_footer' %>
+
+  </body>
+</html>

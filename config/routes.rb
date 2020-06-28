@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dashboards/home'
   namespace :admin do
     resources :blogs
   end
@@ -16,6 +17,6 @@ Rails.application.routes.draw do
   get 'services' => 'application#services'
   get 'contacts' => 'application#contact'
   post 'contact_message' => 'application#contact_message'
-  root to: 'welcome#index'
+  root to: 'dashboards#home'
   resources :blogs, only: [:index]
 end

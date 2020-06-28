@@ -1,19 +1,21 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '~> 5.2.3'
 
-group :development, :test do # <<<< :development, not devlopment
+# group :development, :test do # <<<< :development, not devlopment
   gem 'sqlite3'
-end
+# end
+  
+gem 'pg'
+
 group :production do
   #niroj removed this for development :issue installing pg
-  gem 'pg'
   gem 'rails_12factor'
 end
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.10'
 gem 'devise'
 
 # Use SCSS for stylesheets
