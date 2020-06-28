@@ -8,11 +8,12 @@ gem 'rails', '~> 5.2.3'
   gem 'sqlite3'
 # end
   
-gem 'pg'
+
 
 group :production do
   #niroj removed this for development :issue installing pg
   gem 'rails_12factor'
+  gem 'pg'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.10'
