@@ -4,7 +4,7 @@
       <div class="apland-load"></div>
     </div>
     <!-- Header Area-->
-    <header class="header_area">
+    <header class="header_area white-nav">
       <div class="main_header_area">
         <div class="container">
           <div class="classy-nav-container breakpoint-off">
@@ -21,7 +21,7 @@
                 <!-- Nav-->
                 <div class="classynav">
                   <ul id="corenav">
-                    <li><a href="#home">Home</a>
+                    <li><a href="<%= dashboards_home_path %>">Home</a>
                       <ul class="dropdown">
                         <li><a href="apland-barisal.html">Apland - Barisal</a></li>
                         <li><a href="apland-chattagram.html">Apland - Chattagram</a></li>
@@ -33,6 +33,7 @@
                         <li><a href="apland-sylhet.html">Apland - Sylhet</a></li>
                       </ul>
                     </li>
+                    <li><a href="<%= dashboards_about_us_path %>">About Us</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#">Pages</a>
                       <div class="megamenu">
@@ -95,7 +96,7 @@
                         <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
                       </ul>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="<%= dashboards_contact_us_path %>">Contact</a></li>
                   </ul>
                   <!-- Login Button-->
                   <div class="login-btn-area ml-5 mt-5 mt-lg-0"><a class="btn apland-btn" href="#">Get Started</a></div>
