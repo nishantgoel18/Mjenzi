@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'dashboards/home', as: :home
-  get 'dashboards/contact_us'
-  get 'dashboards/about_us'
-  get 'dashboards/faq'
+  get '/home', to: 'dashboards#home', as: :home
+  get '/contact_us', to: 'dashboards#contact_us', as: :contact_us
+  get '/about_us', to: 'dashboards#about_us', as: :about_us
+  get '/faq', to: 'dashboards#faq', as: :faq
   namespace :admin do
     resources :blogs
     resources :categories
