@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_29_160749) do
+ActiveRecord::Schema.define(version: 2020_06_30_140441) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_06_29_160749) do
     t.datetime "updated_at", null: false
     t.integer "category_id"
     t.string "slug"
+    t.string "image"
     t.index ["slug"], name: "index_admin_blogs_on_slug", unique: true
   end
 
