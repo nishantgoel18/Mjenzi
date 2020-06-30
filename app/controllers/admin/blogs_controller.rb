@@ -4,7 +4,7 @@ class Admin::BlogsController < ApplicationController
 
   # GET /admin/blogs
   # GET /admin/blogs.json
-  layout 'admin'
+  layout 'new_admin'
   
   def index
     @admin_blogs = Admin::Blog.all
@@ -67,11 +67,11 @@ class Admin::BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_blog
-      @admin_blog = Admin::Blog.find(params[:id])
+      @admin_blog = Admin::Blog.find_by(params[:slug])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_blog_params
-      params.require(:admin_blog).permit(:title, :body)
+      params.require(:admin_blog).permit(:title, :body, :category_id, :image)
     end
 end

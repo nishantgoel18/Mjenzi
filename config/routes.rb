@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'dashboards/home'
+  get 'dashboards/home', as: :home
   get 'dashboards/contact_us'
   get 'dashboards/about_us'
+  get 'dashboards/faq'
   namespace :admin do
     resources :blogs
+    resources :categories
   end
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -21,5 +23,6 @@ Rails.application.routes.draw do
   post 'contact_message' => 'application#contact_message'
   # root to: 'welcome#index'
   root to: 'dashboards#home'
-  resources :blogs, only: [:index]
+  resources :categories, only: :show
+  resources :blogs, only: [:index, :show]
 end

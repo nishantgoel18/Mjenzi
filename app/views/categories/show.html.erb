@@ -17,13 +17,14 @@
         <div class="row justify-content-between">
           <%= render partial: 'sidebar' %>
           <div class="col-12 col-md-7">
-          <% if @blogs.present? %>  
+            
+          <% if @category.blogs.present? %>  
             <!-- Single Blog Post Area-->
-            <% @blogs.each do |blog| %>
+            <% @category.blogs.each do |blog| %>
             <div class="single-blog-post mb-5">
-              <div class="post-date"><%= blog.created_at.strftime("%b %d, %Y") %></div><a class="post-title" href="<%= blog_path(blog.slug) %>"><%= blog.title %></a><img class="post-thumbnail" src="<%= url_for(blog.image) if blog.image.attached?%>" alt="">
+              <div class="post-date"><%= blog.created_at.strftime("%b %d, %Y") %></div><a class="post-title" href="<%= blogs_path(blog.slug) %>"><%= blog.title %></a><img class="post-thumbnail" src="<%= url_for(blog.image) if blog.image.attached?%>" alt="">
               <div class="post-meta"><a class="post-author" href="#">By Admin</a><a class="post-tutorial" href="#"><%= blog.category.name %></a></div>
-              <p><%= blog.body %></p><a class="btn apland-btn mt-3" href="<%= blog_path(blog.slug) %>">Continue Reading</a>
+              <p><%= blog.body %></p><a class="btn apland-btn mt-3" href="<%= blogs_path(blog.slug) %>">Continue Reading</a>
             </div>
             <% end %>
           <% else %>

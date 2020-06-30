@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= favicon_link_tag asset_path('apland/mjenzi_logo.jpg'), :rel => 'icon', :type =>  'image/png', sizes: "57x57" %>
+    <%= favicon_link_tag asset_path('apland/core-img/favicon.ico'), :rel => 'icon', :type =>  'image/png', sizes: "57x57" %>
 
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap' %>
 
@@ -22,10 +22,24 @@
   <body>
 
     <%= header_path %>
-    
-    <%= yield %>
 
-    <%= javascript_include_tag 'apland/new_design' %>
+    
+      <div class="innerContent">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+              <br>
+              <br>
+              <br>
+              <br>
+              <%= yield %>
+
+              <%= javascript_include_tag 'apland/new_design' %>
+            </div>
+          </div>
+        </div>
+      </div>
+  
     
     <%= render template: 'layouts/new_design_footer' %>
 
