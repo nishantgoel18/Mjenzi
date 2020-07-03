@@ -5,10 +5,10 @@
 </head>
 <body>
 <p>Dear Admin,
-<p>A contact message has been received from "<%= @user["contact_name"] %>" - <%=@user["contact_email"] %> from the website</p>
+<p>A contact message has been received from "<%= @user.name %>" - <%= @user.email %> from the website</p>
 <p>The message content is as below: </p>
 <p>
-  <%= @user["contact_message"] %>
+  <%= @user.message %>
 </p>
 
 </body>

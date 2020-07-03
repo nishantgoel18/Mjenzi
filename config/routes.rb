@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   get 'services/digital', to: 'dashboards#digital', as: :digital
   get '/services/big_data', to: 'dashboards#big_data', as: :big_data
   get '/services', to: 'dashboards#services', as: :services
+  get '/cloud_solutions/retail_cloud', to: 'dashboards#retail_cloud', as: :retail_cloud
+  get '/cloud_solutions/other_cloud', to: 'dashboards#other_cloud', as: :other_cloud
+  get '/cloud_solutions/backup_cloud', to: 'dashboards#backup_cloud', as: :backup_cloud
   get '/cloud_solutions', to: 'dashboards#cloud_solutions', as: :cloud_solutions
+  post '/contact_message', to: 'dashboards#contact_message', as: :contact_message
+  get '/price_calculator', to: 'dashboards#price_calculator', as: :price_calculator
 
   namespace :admin do
     resources :blogs
@@ -19,7 +24,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'dashboards#home'
-  
+
   resources :categories, only: :show
   resources :blogs, only: [:index, :show]
 

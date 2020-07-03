@@ -17,6 +17,7 @@ gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'pry'
 gem 'friendly_id', '~> 5.2.4'
+gem "letter_opener", :group => :development
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

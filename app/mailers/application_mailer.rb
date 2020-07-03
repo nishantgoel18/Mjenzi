@@ -4,6 +4,6 @@ class ApplicationMailer < ActionMailer::Base
 
   def contact_message(user)
     @user = user
-    mail(from: user["contact_email"],subject: "Contact message from website form")
+    mail(from: user.email, subject: "Contact message from website form")
   end
 end

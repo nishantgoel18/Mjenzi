@@ -4,151 +4,54 @@
         <div class="row justify-content-center">
           <div class="col-12 col-sm-9 col-xl-6">
             <div class="breadcrumb-content text-center">
-              <h2>Choose your plan</h2>
+              <h2>Blog Card</h2>
+              <p>For 5 years we have been developing for providing better services.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Price and Plans Area-->
-    <section class="price_plan_area section_padding_130_80" id="pricing">
+    <!-- Blog Area-->
+    <div class="apland-blog-area section_padding_130">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-8 col-lg-6">
-            <!-- Section Heading-->
-            <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s">
-              <h6>Cloud Solutions</h6>
-              <h3>Build your Cloud today!</h3>
-              <p>Contact us today to roll out your cloud infrastructure however small. All you have to do is choose your preferred CPU:memory ratio, storage, operating system and networking optioins and we will get you running in minutes.</p>
-              <div class="line"></div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-12">
+            <div class="section_heading">
+              <h3>Our Cloud <span>Solutions.</span></h3>
+              <div class="line ml-0"></div>
             </div>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <!-- Single Price Plan Area-->
-          <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="single_price_plan wow fadeInUp" data-wow-delay="0.2s">
-              <div class="title">
-                <h3>VPS Cloud 1</h3>
-                <p>A$ 13.99(ex.GST)/month<br>12 month plan form:</p>
-                <div class="line"></div>
+          <!-- Single Post Area-->
+          <div class="col-12 col-md-12">
+            <div class="single--post--area mb-30"><img src="<%= image_path("apland/blog-img/1.jpg") %>" alt="">
+              <!-- Post Content-->
+              <div class="post-content d-flex justify-content-between">
+                <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= retail_cloud_path %>"></div>
+                <h2 style="text-align: center;">Retail/Wholesale Cloud</h2><a class="btn continue-btn" href="<%= retail_cloud_path %>" style="align-self: center;">Learn More</a>
               </div>
-              <div class="price">
-                <h4>A$12.49</h4><p>(ex.GST)/month</p>
-              </div>
-              <div class="description">
-                <p><i class="lni-check-mark-circle"></i>OpenStack KVM</p>
-                <p><i class="lni-check-mark-circle"></i>SLA 99.99%</p>
-                <p><i class="lni-close"></i>1 VCore(s)</p>
-                <p><i class="lni-close"></i>From 3GHz</p>
-                <p><i class="lni-close"></i>2 GB RAM</p>
-                <p><i class="lni-close"></i>25 GB</p>
-                <p><i class="lni-close"></i>High Avaliability(Ceph)</p>
-              </div>
-              <div class="button"><a class="btn apland-btn btn-2" href="#">Get Started</a></div>
             </div>
           </div>
-          <!-- Single Price Plan Area-->
-          <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="single_price_plan active wow fadeInUp" data-wow-delay="0.2s">
-              <!-- Side Shape-->
-              <div class="side-shape"><img src="img/core-img/popular.png" alt=""></div>
-              <div class="title"><span>Popular</span>
-                <h3>VPS Cloud 2</h3>
-                <p>A$ 25.99(ex.GST)/month<br>12 month plan form:</p>
-                <div class="line"></div>
+          <!-- Single Post Area-->
+          <div class="col-12 col-md-12">
+            <div class="single--post--area mb-30"><img src="<%= image_path("apland/blog-img/2.jpg") %>" alt="">
+              <!-- Post Content-->
+              <div class="post-content d-flex justify-content-between">
+                <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= backup_cloud_path %>"></div>
+                <h2 style="text-align: center;">Backup-as-a-Service</h2><a class="btn continue-btn" href="<%= backup_cloud_path %>" style="align-self: center;">Learn More</a>
               </div>
-              <div class="price">
-                <h4>A$24.49</h4><p>(ex.GST)/month</p>
-              </div>
-              <div class="description">
-                <p><i class="lni-check-mark-circle"></i>OpenStack KVM</p>
-                <p><i class="lni-check-mark-circle"></i>SLA 99.99%</p>
-                <p><i class="lni-check-mark-circle"></i>2 VCore(s)</p>
-                <p><i class="lni-check-mark-circle"></i>From 3GHz</p>
-                <p><i class="lni-close"></i>4 GB RAM</p>
-                <p><i class="lni-close"></i>50GB</p>
-                <p><i class="lni-close"></i>High Avaliability(Ceph)</p>
-              </div>
-              <div class="button"><a class="btn apland-btn" href="#">Get Started</a></div>
             </div>
           </div>
-          <!-- Single Price Plan Area-->
-          <div class="col-12 col-sm-8 col-md-6 col-lg-4">
-            <div class="single_price_plan wow fadeInUp" data-wow-delay="0.2s">
-              <div class="title">
-                <h3>VPS Cloud 3</h3>
-                <p>A$ 45.99(ex.GST)/month<br>12 month plan form:</p>
-                <div class="line"></div>
+          <!-- Single Post Area-->
+          <div class="col-12 col-md-12">
+            <div class="single--post--area mb-30"><img src="<%= image_path("apland/blog-img/3.jpg") %>" alt="">
+              <!-- Post Content-->
+              <div class="post-content d-flex justify-content-between">
+                <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= other_cloud_path %>"></div>
+                <h2 style="text-align: center;">Managed Cloud Solutions</h2><a class="btn continue-btn" href="<%= other_cloud_path %>" style="align-self: center;">Learn More</a>
               </div>
-              <div class="price">
-                <h4>$44.49</h4><p>(ex.GST)/month</p>
-              </div>
-              <div class="description">
-                <p><i class="lni-check-mark-circle"></i>OpenStack KVM</p>
-                <p><i class="lni-check-mark-circle"></i>SLA 99.99%</p>
-                <p><i class="lni-check-mark-circle"></i>4 VCore(s)</p>
-                <p><i class="lni-check-mark-circle"></i>From 3GHz</p>
-                <p><i class="lni-check-mark-circle"></i>8 GB RAM</p>
-                <p><i class="lni-check-mark-circle"></i>100 GB</p>
-                <p><i class="lni-check-mark-circle"></i>High Avaliability(Ceph)</p>
-              </div>
-              <div class="button"><a class="btn apland-btn btn-2" href="#">Get Started</a></div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-12">
-            <div class="about-us-content mb-100">
-              <br>
-              <br>
-              <h5>Become a Reseller today!</h5>
-              <ul>
-                <li>
-                  <p>Contact us today for a test drive demo today!</p>
-                </li>
-                <br>
-              </ul>
-              <h5>We are a channel-friendly IaaS company providing;</h5>
-              <ul>
-                <li>
-                  <p>Multiple cloud infrastructure options;</p>
-                </li>
-                <li>
-                  <p>CPU to Ram Ratios (Standard, High CPU and High Memory),</p>
-                </li>
-                <li>
-                  <p>Storage (SSD, Standard or Archival),</p>
-                </li>
-                <li>
-                  <p>Windows or Linux preconfigured systems. OS image options include CentOS, Debian, FreeBSD,Ubuntu, Windows Server as well as network operating systems VyOS and pfSense.</p>
-                </li>
-                <li>
-                  <p>Networking options (Private, Public or Hybrid)</p>
-                </li>
-                <li>
-                  <p>Automated white-label billing – bill your clients through our billing solution which is in-built in the Platform. It’s as simple as entering a pricing card.</p>
-                </li>
-                <li>
-                  <p>Full personable support from us when you require it.</p>
-                </li>
-                <li>
-                  <p>Multiple commission scenario on contract length, minimum usage, and upfront payment discounts.</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-      </div>
-    </section>
-    <!-- CTA Area-->
-    <div class="cta-area section_padding_130_80">
-      <div class="container">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-12 col-sm-8">
-            <div class="cta-content mb-50">
-              <h3 class="mb-0">Have questions, or want to talk about working with us?</h3>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4 text-sm-right"><a class="btn apland-btn btn-4 mb-50" href="#">Let's talk Us</a></div>
         </div>
       </div>
     </div>
+    <%= render partial: 'contact_us_today'%>

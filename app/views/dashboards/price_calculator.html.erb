@@ -1,0 +1,83 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Plan</th>
+    <th>Feature</th>
+  </tr>
+  <tr>
+    <td><select id="myPlan" onchange="get_plan_features()">
+    <option value="1Gb">Basic
+    <option value="2Gb">Premiuim
+    <option value="3Gb">Gold
+    </select></td>
+    <td><select>
+    <option id="myFeature">
+    </select></td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+function get_plan_features(){
+  # var x = document.getElementById("myPlan").value;
+  x = $("#myPlan").val();
+  # document.getElementById("myFeature").innerHTML =  x;
+  $("#myFeature").html(x);
+}
+function get_feature_prices() {
+  var x = document.getElementById("myPlan").value;
+  document.getElementById("myPrice").innerHTML =  x;
+}
+
+# var changeAllData = function(){
+    # get_plan_features();
+#     get_branch_vehicles();
+  }
+</script>
+
+# <script type="text/javascript">
+#   var get_plan_features = function(){
+#    var x = document.getElementById("mySelect").value;
+#   document.getElementById("myValue").innerHTML =  x;
+#   };
+
+#   var get_branch_vehicles = function(){
+#     $('.loading').show()
+#     $.ajax({
+#       url: "/admin/get_branch_vehicles",
+#       type: "get",
+#       data: {
+#         branch_id: $('#job_branch_id').val()
+#       }
+#     })
+#   };
+
+#   var changeAllData = function(){
+#     get_customer_branches();
+#     get_branch_vehicles();
+#   }
+# </script>
