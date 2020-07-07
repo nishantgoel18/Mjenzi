@@ -1,14 +1,25 @@
 <p id="notice"><%= notice %></p>
+<table class="table">
+<tr>
+  <th width="20%"><strong>Title:</strong></th>
+  <td><%= @admin_blog.title %></td>
+</tr>
 
-<p>
-  <strong>Title:</strong>
-  <%= @admin_blog.title %>
-</p>
+<tr>
+  <th width="20%"><strong>Category:</strong></th>
+  <td><%= @admin_blog.category.name %></td>
+</tr>
 
-<p>
-  <strong>Body:</strong>
-  <%= @admin_blog.body %>
-</p>
+<tr>
+  <th width="20%"><strong>Body:</strong></th>
+  <td><%= @admin_blog.body %></td>
+</tr>
+
+<tr>
+  <th width="20%"><strong>Banner:</strong></th>
+  <td><%= image_tag @admin_blog.image.url, style: 'height: 25em; width: 100%;' %></td>
+</tr>
+</table>
 
 <%= link_to 'Edit', edit_admin_blog_path(@admin_blog) %> |
 <%= link_to 'Back', admin_blogs_path %>

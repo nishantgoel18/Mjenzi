@@ -1,36 +1,36 @@
-<%= form_for(admin_blog, multipart: true) do |f| %>
-  <% if admin_blog.errors.any? %>
+<%= form_for(blog, multipart: true) do |f| %>
+  <% if blog.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(admin_blog.errors.count, "error") %> prohibited this admin_blog from being saved:</h2>
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
 
       <ul>
-      <% admin_blog.errors.full_messages.each do |message| %>
+      <% blog.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :category %>
-    <%= f.collection_select :category_id, Admin::Category.all, :id, :name, required: :true %>
+    <%= f.select :category_id, options_from_collection_for_select(Admin::Category.all, :id, :name), {}, {required: :true, class: 'form-control'} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :image %>
-    <%= f.file_field :image %>
-
-  <div class="actions">
-    <%= f.submit %>
+    <%= f.file_field :image, required: @ %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Submit', class: 'btn btn-success' %>
   </div>
 <% end %>
