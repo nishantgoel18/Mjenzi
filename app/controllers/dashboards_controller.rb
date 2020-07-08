@@ -42,14 +42,11 @@ class DashboardsController < ApplicationController
   end
 
   def contact_message
-    @user = params
-    notice =""
     begin
-      email_status = ApplicationMailer.contact_message(@user).deliver
+      email_status = ApplicationMailer.contact_message(params.clone).deliver
     rescue Exception => e
       email_status = false
     end
-    
     
     if email_status
       notice = "Message has been sent successfully"

@@ -1,48 +1,48 @@
 <div id="sucess_msg"></div>
 <div class="col-12 col-md-6">
-      <div class="contact_from mb-50">
-              <!-- <form action="http://demo.designing-world.com/apland-4.3.0/mail.php" method="post" id="main_contact_form"> -->
-              <%= form_for @contact, url: contact_message_path, :html => {:id=>"main-contact-form", :name=>"contact-form", class: 'contact-form'} do |f| %>  
-                <div class="contact_input_area">
-                  <div id="success_fail_info"></div>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="form-group">
-                        <!-- <input class="form-control" type="text" name="name" id="name" placeholder="Your Name" required> -->
-                        <%= f.text_field :name, :required => true, :class=>"form-control", :placeholder=>"Name" %>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <!-- <input class="form-control" type="email" name="email" id="email" placeholder="Your E-mail" required> -->
-                        <%= f.email_field :email, :required => true,:class=>"form-control", :placeholder=>"Email" %>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <!-- <input class="form-control" type="text" name="subject" id="subject" placeholder="Your Subject" required> -->
-                        <%= f.text_field :subject, :class=>"form-control", :placeholder=>"Subject" %>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <!-- <input class="form-control" type="text" name="number" id="number" placeholder="Your Number *" required> -->
-                        <%= f.text_field :phone_number, :class=>"form-control", :placeholder=>"Phone Number" %>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <!-- <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Your Message *" required></textarea> -->
-                        <%= f.text_area :message, :as => :text, :required => true, :class=>"form-control", rows: "5", cols: "100", :placeholder=>"Message" %>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <!-- <button class="btn apland-btn" type="submit">SEND MESSAGE</button> -->
-                      <%= f.submit 'Send message', class: 'btn apland-btn' %>
-                    </div>
-                  </div>
-                </div>
-              <% end %>  
-              <!-- </form> -->
-      </div>
-</div>
+  <div class="contact_from mb-50">
+    <!-- <form action="http://demo.designing-world.com/apland-4.3.0/mail.php" method="post" id="main_contact_form"> -->
+      <%= form_for @contact, url: contact_message_path, :html => {:id=>"main-contact-form", :name=>"contact-form", class: 'contact-form'} do |f| %>  
+        <div class="contact_input_area">
+          <div id="success_fail_info"></div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <!-- <input class="form-control" type="text" name="name" id="name" placeholder="Your Name" required> -->
+                <%= f.text_field :name, :required => true, :class=>"form-control", :placeholder=>"Name" %>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <!-- <input class="form-control" type="email" name="email" id="email" placeholder="Your E-mail" required> -->
+                <%= f.email_field :email, :required => true,:class=>"form-control", :placeholder=>"Email" %>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <!-- <input class="form-control" type="text" name="subject" id="subject" placeholder="Your Subject" required> -->
+                <%= f.text_field :subject, :class=>"form-control", :placeholder=>"Subject" %>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <!-- <input class="form-control" type="text" name="number" id="number" placeholder="Your Number *" required> -->
+                <%= f.text_field :phone_number, :class=>"form-control", :placeholder=>"Phone Number" %>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <!-- <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Your Message *" required></textarea> -->
+                <%= f.text_area :message, :as => :text, :required => true, :class=>"form-control", rows: "5", cols: "100", :placeholder=>"Message" %>
+              </div>
+            </div>
+            <div class="col-12">
+              <!-- <button class="btn apland-btn" type="submit">SEND MESSAGE</button> -->
+              <%= f.submit 'Send message', class: 'btn apland-btn' %>
+            </div>
+          </div>
+        </div>
+      <% end %>  
+      <!-- </form> -->
+    </div>
+  </div>
