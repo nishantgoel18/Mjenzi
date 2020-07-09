@@ -28,7 +28,7 @@
 
   <div class="form-group">
     <%= f.label :image %>
-    <%= f.file_field :image, required: @ %>
+    <%= f.file_field :image, required: blog.image.blank? %>
   </div>
   <div class="form-group">
     <%= f.submit 'Submit', class: 'btn btn-success' %>
