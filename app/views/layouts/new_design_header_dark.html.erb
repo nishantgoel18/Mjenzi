@@ -27,11 +27,17 @@
                       <li><a href="<%= destroy_user_session_url %>" method='delete'>Log Out</a></li>
                     <% else %>
                       <li><a href="<%= root_path %>">Home</a></li>
-                      <li><a href="<%= cloud_solutions_path %>">Cloud Solutions</a></li>  
+                      <li><a href="<%= cloud_solutions_path %>">Cloud Solutions</a>
+                       <ul class="dropdown">
+                        <li><a href="<%= retail_path %>">Retail/Wholesale Cloud</a></li>
+                        <li><a href="<%= backup_path %>">Backup-as-a-Service</a></li>
+                        <li><a href="<%= other_path %>">Managed Cloud Solutions</a></li>
+                       </ul>
+                      </li>    
                       <li><a href="<%= faq_path %>">Faq<small>s</small></a></li>
                       <li><a href="<%= blogs_path %>">Blog</a></li>
                       <li><a href="<%= contact_us_path %>">Get Started Today</a></li>
-                      <li><a href="https://cloud.mjenzi.com/">Platform Login</a></li>
+                      <li><a href="https://cloud.mjenzi.com/" target="_blank">Platform Login</a></li>
                     <% end -%>
                   </ul>
                 </div>

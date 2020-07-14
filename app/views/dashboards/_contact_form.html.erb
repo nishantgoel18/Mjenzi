@@ -9,13 +9,13 @@
             <div class="col-12">
               <div class="form-group">
                 <!-- <input class="form-control" type="text" name="name" id="name" placeholder="Your Name" required> -->
-                <%= f.text_field :name, :required => true, :class=>"form-control", :placeholder=>"Name" %>
+                <%= f.text_field :name, :class=>"form-control", :placeholder=>"Name*" %>
               </div>
             </div>
             <div class="col-12">
               <div class="form-group">
                 <!-- <input class="form-control" type="email" name="email" id="email" placeholder="Your E-mail" required> -->
-                <%= f.email_field :email, :required => true,:class=>"form-control", :placeholder=>"Email" %>
+                <%= f.email_field :email, :class=>"form-control", :placeholder=>"Email*" %>
               </div>
             </div>
             <div class="col-12">
@@ -33,7 +33,7 @@
             <div class="col-12">
               <div class="form-group">
                 <!-- <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Your Message *" required></textarea> -->
-                <%= f.text_area :message, :as => :text, :required => true, :class=>"form-control", rows: "5", cols: "100", :placeholder=>"Message" %>
+                <%= f.text_area :message, :as => :text, :required => true, :class=>"form-control", rows: "5", cols: "100", :placeholder=>"Message*" %>
               </div>
             </div>
             <div class="col-12">
@@ -46,3 +46,8 @@
       <!-- </form> -->
     </div>
   </div>
+  <style type="text/css">
+    ::placeholder { 
+  color: red !important
+}
+  </style>
