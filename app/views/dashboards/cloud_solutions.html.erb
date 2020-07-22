@@ -22,27 +22,28 @@
           </div>
           <!-- Single Post Area-->
           <div class="col-12 col-md-12">
-            <div class="single--post--area mb-30"><img src="<%= image_path("apland/blog-img/1.jpg") %>" alt="">
+            <div class="single--post--area mb-30" style="cursor: pointer;" onclick='window.location.href = $(this).data("href");' data-href = '<%= retail_cloud_path %>'><img src="<%= image_path("apland/blog-img/1.jpg") %>" alt="">
               <!-- Post Content-->
               <div class="post-content d-flex justify-content-between">
-                <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= retail_cloud_path %>"></div>
+                <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= retail_cloud_path %>"></div> 
                 <h2 style="text-align: center;">Retail/Wholesale Cloud</h2><a href="<%= retail_cloud_path %>"></a>
               </div>
             </div>
           </div>
           <!-- Single Post Area-->
           <div class="col-12 col-md-12">
-            <div class="single--post--area mb-30"><img src="<%= image_path("apland/blog-img/2.jpg") %>" alt="">
+            <div class="single--post--area mb-30" style="cursor: pointer;" onclick='window.location.href = $(this).data("href");' data-href = '<%= backup_cloud_path %>'><img src="<%= image_path("apland/blog-img/2.jpg") %>" alt="">
               <!-- Post Content-->
               <div class="post-content d-flex justify-content-between">
                 <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= backup_cloud_path %>"></div>
-                <h2 style="text-align: center;">Backup-as-a-Service</h2><a href="<%= backup_cloud_path %>"></a>
+                <h2 style="text-align: center;">Backup-as-a-Service</h2><a href="<%= other_cloud_path %>"></a>
               </div>
             </div>
           </div>
+
           <!-- Single Post Area-->
           <div class="col-12 col-md-12">
-            <div class="single--post--area mb-30"><img src="<%= image_path("apland/blog-img/3.jpg") %>" alt="">
+            <div class="single--post--area mb-30" style="cursor: pointer;" onclick='window.location.href = $(this).data("href");' data-href = '<%= other_cloud_path %>'><img src="<%= image_path("apland/blog-img/3.jpg") %>" alt="">
               <!-- Post Content-->
               <div class="post-content d-flex justify-content-between">
                 <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= other_cloud_path %>"></div>
