@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   get '/cloud_solutions/retail_cloud', to: 'dashboards#retail_cloud', as: :retail_cloud
   get '/cloud_solutions/other_cloud', to: 'dashboards#other_cloud', as: :other_cloud
   get '/cloud_solutions/backup_cloud', to: 'dashboards#backup_cloud', as: :backup_cloud
+
+  get '/managed_cloud_solutions/voice_solutions', to: 'dashboards#voice_solutions', as: :voice_solutions
+  get '/managed_cloud_solutions/networking_solutions', to: 'dashboards#networking_solutions', as: :networking_solutions
+  get '/managed_cloud_solutions/bare_metal_as_service', to: 'dashboards#bare_metal_as_service', as: :bare_metal_as_service
+  get '/managed_cloud_solutions/vmware_cloud_solutions', to: 'dashboards#vmware_cloud_solutions', as: :vmware_cloud_solutions
+  get '/managed_cloud_solutions/desktop_as_service', to: 'dashboards#desktop_as_service', as: :desktop_as_service
+
   get '/cloud_solutions', to: 'dashboards#cloud_solutions', as: :cloud_solutions
   post '/contact_message', to: 'dashboards#contact_message', as: :contact_message
   get '/price_calculator', to: 'dashboards#price_calculator', as: :price_calculator
