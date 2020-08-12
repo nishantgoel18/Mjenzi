@@ -43,7 +43,7 @@ class DashboardsController < ApplicationController
 
   def contact_message
     begin
-      email_status = ApplicationMailer.contact_message(params.clone).deliver
+      email_status = ApplicationMailer.contact_message(params[:contact].clone).deliver
     rescue Exception => e
       email_status = false
     end

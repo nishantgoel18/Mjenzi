@@ -5,10 +5,10 @@
 </head>
 <body>
 <p>Dear Admin,
-<p>A contact message has been received from "<%= @user.name %>" - <%= @user.email %> from the website</p>
+<p>A contact message has been received from <b><%= @name %></b> - <b><%= @email %></b> from the website with subject <b><%= @subject %></b></p>
 <p>The message content is as below: </p>
 <p>
-  <%= @user.message %>
+  <%= @message %>
 </p>
 
 </body>

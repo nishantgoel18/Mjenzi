@@ -1,7 +1,9 @@
 module NewDesignHelper
 
 	def header_path
-		if request.path == root_path or request.path == new_user_session_path or params[:controller].include?('admin')
+    pages_to_show_dark_header = [root_path, new_user_session_path, retail_cloud_path, other_cloud_path, backup_cloud_path, voice_solutions_path, networking_solutions_path, bare_metal_as_service_path, vmware_cloud_solutions_path, desktop_as_service_path]
+
+		if pages_to_show_dark_header.include?(request.path) or params[:controller].include?('admin')
 			render template: 'layouts/new_design_header_dark' 
 		else
 			render template: 'layouts/new_design_header' 	
