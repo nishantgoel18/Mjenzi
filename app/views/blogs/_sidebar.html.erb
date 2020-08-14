@@ -1,25 +1,25 @@
 <div class="col-12 col-md-5 col-lg-4">
-    <div class="sidebar-area mb-100 mb-md-0">
-              <!-- Search Form-->
-          <div class="single-widget-area mb-50">
-                <form class="widget-form" action="#" method="post">
-                  <input class="form-control" type="search" placeholder="Search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-              <!-- Catagories List-->
-              <div class="single-widget-area mb-50">
-                <h4 class="widget-title mb-30">Categories</h4>
-                <!-- Cata List-->
-              <% if @categories.present? %>
-                <% @categories.each do |category| %>
-                <ul class="catagories-list">
-                  <li><a href="<%= category_path(category.slug) %>"><i class="fa fa-angle-double-right"> </i><%= category.name %></a></li>
-                </ul>
-                <% end %>
-              <% else %>
-                <p>No Categories Found!</p>
-              <% end %>  
-          </div>
-      </div>
+  <div class="sidebar-area mb-100 mb-md-0">
+    <!-- Search Form-->
+    <div class="single-widget-area mb-50">
+      <form class="widget-form" action="#" method="post">
+        <input class="form-control" type="search" placeholder="Search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <!-- Catagories List-->
+    <div class="single-widget-area mb-50">
+      <h4 class="widget-title mb-30">Categories</h4>
+      <!-- Cata List-->
+      <% if @categories.present? %>
+        <% @categories.each do |category| %>
+          <ul class="catagories-list">
+            <li><a href="<%= category_path(category.slug) %>"><i class="fa fa-angle-double-right"> </i><%= category.name %></a></li>
+          </ul>
+        <% end %>
+      <% else %>
+        <p>No Categories Found!</p>
+      <% end %>  
+    </div>
+  </div>
 </div>
