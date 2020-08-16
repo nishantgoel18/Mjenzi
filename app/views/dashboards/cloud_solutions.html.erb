@@ -1,41 +1,31 @@
 <!-- Breadcrumb Area-->
-    <div class="breadcrumb-area bg-img bg-black-overlay section_padding_130" style="background-image: url('<%= image_path("apland/bg-img/testimonials.jpg") %>');">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-9 col-xl-6">
-            <div class="breadcrumb-content text-center">
-              <h2>Cloud Solutions</h2>
+
+<!-- Blog Area-->
+<div class="apland-blog-area section_padding_130">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-12">
+        <div class="section_heading">
+          <h3>Our Cloud <span>Solutions.</span></h3>
+          <div class="line ml-0"></div>
+        </div>
+      </div>
+      <!-- Single Post Area-->
+      <div class="col-12 col-md-12">
+        <div class="single--post--area mb-30" style="cursor: pointer;" onclick='window.location.href = $(this).data("href");' data-href = '<%= retail_cloud_path %>'><img src="<%= image_path("apland/blog-img/1.jpg") %>" alt="">
+          <!-- Post Content-->
+          <div class="post-content d-flex justify-content-between">
+            <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= retail_cloud_path %>"></div> 
+              <h2 style="text-align: center;">Retail/Wholesale Cloud</h2><a href="<%= retail_cloud_path %>"></a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Blog Area-->
-    <div class="apland-blog-area section_padding_130">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-12">
-            <div class="section_heading">
-              <h3>Our Cloud <span>Solutions.</span></h3>
-              <div class="line ml-0"></div>
-            </div>
-          </div>
-          <!-- Single Post Area-->
-          <div class="col-12 col-md-12">
-            <div class="single--post--area mb-30" style="cursor: pointer;" onclick='window.location.href = $(this).data("href");' data-href = '<%= retail_cloud_path %>'><img src="<%= image_path("apland/blog-img/1.jpg") %>" alt="">
-              <!-- Post Content-->
-              <div class="post-content d-flex justify-content-between">
-                <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= retail_cloud_path %>"></div> 
-                <h2 style="text-align: center;">Retail/Wholesale Cloud</h2><a href="<%= retail_cloud_path %>"></a>
-              </div>
-            </div>
-          </div>
-          <!-- Single Post Area-->
-          <div class="col-12 col-md-12">
-            <div class="single--post--area mb-30" style="cursor: pointer;" onclick='window.location.href = $(this).data("href");' data-href = '<%= backup_cloud_path %>'><img src="<%= image_path("apland/blog-img/2.jpg") %>" alt="">
-              <!-- Post Content-->
-              <div class="post-content d-flex justify-content-between">
-                <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= backup_cloud_path %>"></div>
+        <!-- Single Post Area-->
+        <div class="col-12 col-md-12">
+          <div class="single--post--area mb-30" style="cursor: pointer;" onclick='window.location.href = $(this).data("href");' data-href = '<%= backup_cloud_path %>'><img src="<%= image_path("apland/blog-img/2.jpg") %>" alt="">
+            <!-- Post Content-->
+            <div class="post-content d-flex justify-content-between">
+              <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= backup_cloud_path %>"></div>
                 <h2 style="text-align: center;">Backup-as-a-Service</h2><a href="<%= other_cloud_path %>"></a>
               </div>
             </div>
@@ -47,11 +37,11 @@
               <!-- Post Content-->
               <div class="post-content d-flex justify-content-between">
                 <div class="post-meta d-flex justify-content-between align-items-center"><a class="post-tag" href="<%= other_cloud_path %>"></div>
-                <h2 style="text-align: center;">Managed Cloud Solutions</h2><a href="<%= other_cloud_path %>"></a>
+                  <h2 style="text-align: center;">Managed Cloud Solutions</h2><a href="<%= other_cloud_path %>"></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <%= render partial: 'shared/contact_us_today'%>
+      <%= render partial: 'shared/contact_us_today'%>
