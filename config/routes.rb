@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get '/contact_us', to: 'dashboards#contact_us', as: :contact_us
   get '/about_us', to: 'dashboards#about_us', as: :about_us
   get '/faqs', to: 'dashboards#faq', as: :faq
-  get 'services/web_design', to: 'dashboards#web_design', as: :web_design
-  get 'services/internet', to: 'dashboards#internet', as: :internet
-  get 'services/digital', to: 'dashboards#digital', as: :digital
+  get '/services/web_design', to: 'dashboards#web_design', as: :web_design
+  get '/services/internet', to: 'dashboards#internet', as: :internet
+  get '/services/digital', to: 'dashboards#digital', as: :digital
   get '/services/big_data', to: 'dashboards#big_data', as: :big_data
   get '/services', to: 'dashboards#services', as: :services
   get '/cloud_solutions/retail_cloud', to: 'dashboards#retail_cloud', as: :retail_cloud

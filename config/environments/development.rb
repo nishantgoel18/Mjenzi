@@ -35,7 +35,7 @@ Rails.application.configure do
   # ActionMailer::Base.delivery_method = :smtp
 
   #for Gmail
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
 
   # config.action_mailer.delivery_method = :sendmail

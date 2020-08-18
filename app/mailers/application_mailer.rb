@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'cloud@mjenzi.com',to: "nishant@pluralcode.com" #to: "info@mjenzi.com"
+  default from: 'kinyua@liulo.org ',to: "info@mjenzi.com"
   layout 'mailer'
 
   def contact_message(contact_params)
@@ -8,6 +8,6 @@ class ApplicationMailer < ActionMailer::Base
     @subject = contact_params[:subject]
     @message = contact_params[:message]
 
-    mail(subject: "Contact message from website form")
+    mail(subject: "Contact query from website")
   end
 end
