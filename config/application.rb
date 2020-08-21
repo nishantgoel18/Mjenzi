@@ -14,11 +14,11 @@ module Wakariera
     config.assets.paths << Rails.root.join("app", "assets", "images", "client","portfolio","team")
     config.action_mailer.smtp_settings = {
       :address        => 'smtp.zoho.com',
-      :port           => 465,
-      :authentication => :plain,
+      :port           => 587,
+      :domain         => 'mjenzi.com',
       :user_name      => 'cloud@mjenzi.com',
       :password       => 'gMA4XamcJ4tu',
-      :domain         => 'mjenzi.com',
+      :authentication => :plain,
       :enable_starttls_auto => true
     }
   end
