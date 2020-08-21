@@ -17,7 +17,7 @@ module Wakariera
       :port           => 587,
       :domain         => 'mjenzi.com',
       :user_name      => 'cloud@mjenzi.com',
-      :password       => 'gMA4XamcJ4tu',
+      :password       => 'Tigaupus8305!',
       :authentication => :plain,
       :enable_starttls_auto => true
     }
