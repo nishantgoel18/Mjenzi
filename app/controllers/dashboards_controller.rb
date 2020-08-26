@@ -11,7 +11,7 @@ class DashboardsController < ApplicationController
   end
 
   def contact_us
-    @contact = Contact.new
+    @enquiry = Enquiry.new
   end
 
   def web_design
@@ -42,15 +42,16 @@ class DashboardsController < ApplicationController
   end
 
   def contact_message
-    begin
-      email_status = ApplicationMailer.contact_message(params[:contact].clone).deliver
-    rescue Exception => e
-      email_status = false
-    end
+    @enquiry = Enquiry.new(enquiry_params)
+    @enquiry.save(validate: false)
     redirect_to contact_us_path, notice: "Message has been sent successfully"
   end
 
   def price_calculator
   end
 
+  private
+  def enquiry_params
+    params.require(:enquiry).permit(:name, :email, :message, :subject, :phone)
+  end
 end

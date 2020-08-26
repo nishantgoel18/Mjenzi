@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<table class="table table-bordered">
+<tr>
+  <th width="20%"><strong>Name:</strong></th>
+  <td><%= @enquiry.name %></td>
+</tr>
+
+<tr>
+  <th width="20%"><strong>Subject:</strong></th>
+  <td><%= @enquiry.subject %></td>
+</tr>
+
+<tr>
+  <th width="20%"><strong>Email:</strong></th>
+  <td><%= @enquiry.email %></td>
+</tr>
+
+<tr>
+  <th width="20%"><strong>Phone:</strong></th>
+  <td><%= @enquiry.phone %></td>
+</tr>
+
+<tr>
+  <th width="20%"><strong>Message:</strong></th>
+  <td><%= @enquiry.message %></td>
+</tr>
+
+</table>
+
+<%= link_to 'Back', admin_enquiries_path %>

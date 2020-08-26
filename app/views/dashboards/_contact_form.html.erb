@@ -2,7 +2,7 @@
 <div class="col-12 col-md-6">
   <div class="contact_from mb-50">
     <!-- <form action="http://demo.designing-world.com/apland-4.3.0/mail.php" method="post" id="main_contact_form"> -->
-      <%= form_for @contact, url: contact_message_path, :html => {:id=>"main-contact-form", :name=>"contact-form", class: 'contact-form'} do |f| %>  
+      <%= form_for @enquiry, url: contact_message_path, :html => {:id=>"main-contact-form", :name=>"contact-form", class: 'contact-form'} do |f| %>  
         <div class="contact_input_area">
           <div id="success_fail_info"></div>
           <div class="row">
@@ -27,7 +27,7 @@
             <div class="col-12">
               <div class="form-group">
                 <!-- <input class="form-control" type="text" name="number" id="number" placeholder="Your Number *" required> -->
-                <%= f.telephone_field :phone_number, :class=>"form-control", :placeholder=>"Phone Number" %>
+                <%= f.telephone_field :phone, :class=>"form-control", :placeholder=>"Phone Number" %>
               </div>
             </div>
             <div class="col-12">
