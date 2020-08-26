@@ -13,12 +13,12 @@ module Wakariera
     # -- all .rb files in that directory are automatically loaded.
     config.assets.paths << Rails.root.join("app", "assets", "images", "client","portfolio","team")
     config.action_mailer.smtp_settings = {
-      :address        => 'smtp.gmail.com',
-      :port           => '587',
+      :address        => 'smtp.zoho.com',
+      :port           => 587,
+      :domain         => 'mjenzi.com',
+      :user_name      => 'cloud@mjenzi.com',
+      :password       => 'pass',
       :authentication => :plain,
-      :user_name      => 'kinyua@liulo.org',
-      :password       => 'dave8394',
-      :domain         => 'liulo.org',
       :enable_starttls_auto => true
     }
   end
