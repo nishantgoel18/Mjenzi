@@ -5,7 +5,9 @@
 <table class="table">
   <thead>
     <tr>
-      <th width="50%">Subject</th>
+      <th width="30%">Subject</th>
+      <th width="30%">Message</th>
+
       <th>Name</th>
       <th>Phone</th>
       <th>Recieved At</th>
@@ -17,11 +19,13 @@
     <% @enquiries.each do |enquiry| %>
       <tr>
         <td><%= enquiry.subject %></td>
+        <td><%= enquiry.message %></td>
+        
         <td><%= enquiry.name %></td>
         <td><%= enquiry.phone %></td>
         <td><%= enquiry.created_at.strftime('%d %b, %Y') %></td>
 
-        <td><%= link_to 'Show', [:admin, enquiry] %></td>
+        <td><%= link_to 'Show', [:admin, enquiry] %> | <%= link_to 'Destroy', [:admin, enquiry], method: 'delete', data: {confirm: 'Are you sure?'} %></td>
       </tr>
     <% end %>
   </tbody>

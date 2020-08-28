@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :blogs
-    resources :enquiries, only: [:index, :show]
+    resources :enquiries, only: [:index, :show, :destroy]
     resources :categories, except: :show
   end
 
