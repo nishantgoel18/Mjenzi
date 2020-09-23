@@ -11,7 +11,7 @@
         <div class="single-blog-post mb-5">
           <div class="post-date"><%= blog.created_at.strftime("%b %d, %Y") %></div><a class="post-title" href="<%= blog_path(blog.slug) %>"><%= blog.title %></a><img class="post-thumbnail" src="<%= image_path(blog.image) %>" alt="">
           <div class="post-meta"><a class="post-author" href=""><%= blog.author_name %></a><a class="post-tutorial" href="<%= category_path(blog.category.slug) %>"><%= blog.category.name %></a></div>
-          <p><%= blog.body %></p><a class="btn apland-btn mt-3" href="<%= blog_path(blog.slug) %>">Continue Reading</a>
+          <p><%= blog.body.html_safe %></p><a class="btn apland-btn mt-3" href="<%= blog_path(blog.slug) %>">Continue Reading</a>
         </div>
         <% end %>
       <% else %>

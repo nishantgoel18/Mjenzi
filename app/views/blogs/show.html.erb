@@ -7,7 +7,7 @@
             <div class="single-blog-post"><span class="post-date"><%= @blog.created_at.strftime("%b %d, %Y") %></span>
               <h1 class="mb-3"><%= @blog.title %></h1>
               <div class="post-meta mb-5"><a class="post-author" href="#"><%= @blog.author_name %></a><a class="post-tutorial" href="#"><%= @blog.category.name %></a></div><img class="post-thumbnail" src="<%= @blog.image %>" alt="">
-              <p><%= @blog.body %></p>
+              <p><%= @blog.body.html_safe %></p>
             </div>
             <!-- Comments Area-->
             <!-- <div class="comment_area mb-50 clearfix">
