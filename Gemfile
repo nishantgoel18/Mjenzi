@@ -14,7 +14,7 @@ end
 gem 'puma', '~> 3.10'
 
 gem 'devise'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'pry'
 gem 'friendly_id', '~> 5.2.4'
 gem "letter_opener", :group => :development
